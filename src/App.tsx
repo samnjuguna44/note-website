@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Note } from './models/note.models'
 import './App.css';
 
+
+
 function App() {
+  //angular brackets to define the type of notes
+  const [notes, setNotes] = useState<Note[]>([{
+    //object to show value of the string properties
+    id: (new Date).toString(),
+    title: "Meetings",
+    text: "Schedule meeting with UI/UX Team",
+    color: "#dfdfdf",
+    date: (new Date).toString()
+  }]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      App
     </div>
   );
 }

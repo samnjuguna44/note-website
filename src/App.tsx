@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import NotesList from './components/NotesList';
+import CreateNotes from './components/CreateNotes';
 import { Note } from './models/note.models';
 import './App.css';
 import { Col, Container, Row } from 'react-bootstrap';
+
 
 
 
@@ -24,7 +26,13 @@ function App() {
       <Container className="mt-5">
         <Row>
           <Col>
-             <NotesList />
+             {/*passing notes prop in NotesList to have all the notes in this component*/}
+             <NotesList notes={notes} setNotes={setNotes}/>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+             <CreateNotes notes={notes} setNotes={setNotes}/>
           </Col>
         </Row>
       </Container>

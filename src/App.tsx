@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { Note } from './models/note.models'
+import Header from './components/Header';
+import NotesList from './components/NotesList';
+import { Note } from './models/note.models';
 import './App.css';
+import { Col, Container, Row } from 'react-bootstrap';
 
 
 
@@ -16,9 +19,16 @@ function App() {
   }]);
 
   return (
-    <div className="App">
-      App
-    </div>
+    <>
+      <Header />
+      <Container className="mt-5">
+        <Row>
+          <Col>
+             <NotesList />
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 

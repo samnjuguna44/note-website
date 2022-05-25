@@ -13,11 +13,11 @@ function App() {
   //angular brackets to define the type of notes
   const [notes, setNotes] = useState<Note[]>([{
     //object to show value of the string properties
-    id: (new Date).toString(),
+    id: (new Date()).toString(),
     title: "Meetings",
     text: "Schedule meeting with UI/UX Team",
     color: "#dfdfdf",
-    date: (new Date).toString()
+    date: (new Date()).toString()
   }]);
 
   return (

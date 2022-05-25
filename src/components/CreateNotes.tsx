@@ -46,7 +46,7 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({notes, setNote
         <h2>Create Notes</h2>
         {/*display error if no input is written in the fields*/ }
         {error && <Alert variant="danger">{error}</Alert>}
-        <Form className="mt-3 mb-3" onSubmit={(e) => handleSubmit(e)}>
+        <Form className="mt-3 mb-3" onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}>
             <Form.Group className="mb-3" controlId="formBasicTitle">
                 <Form.Label>Title</Form.Label>
                 <Form.Control type="text" placeholder="Enter Title for the Note" ref={ titleRef } />

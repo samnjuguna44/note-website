@@ -35,7 +35,8 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({notes, setNote
             color: (colorRef.current as HTMLInputElement).value,
             date: (new Date()).toString()
         }]);
-
+ 
+        //this is to clear the Title and Text field upon submitting
         (titleRef.current as HTMLInputElement).value = "";
         (textRef.current as HTMLTextAreaElement).value = "";
     }

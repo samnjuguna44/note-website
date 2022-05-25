@@ -32,6 +32,7 @@ function App() {
         </Row>
         <Row>
           <Col>
+             {/*passing notes and setNotes prop in CreateNotes to enable the creation of notes*/}
              <CreateNotes notes={notes} setNotes={setNotes}/>
           </Col>
         </Row>

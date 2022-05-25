@@ -11,11 +11,14 @@ interface ICreateNotesProps {
 }
 
 const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({notes, setNotes}) => {
+    //useState to capture the error
     const[error, setError] = React.useState<string>("")
+    //using useRef for validation to get the values
     const titleRef = React.useRef<HTMLInputElement | null>(null);
     const textRef = React.useRef<HTMLTextAreaElement | null>(null);
     const colorRef = React.useRef<HTMLInputElement | null>(null);
     
+    //submit function with event listener
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>): void => {
         //prevent page from refreshing after submitting
         e.preventDefault();
